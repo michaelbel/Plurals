@@ -1,0 +1,100 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
+package org.michaelbel.plurals
+
+import android.os.Bundle
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.navigation.compose.composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.compose.AndroidFragment
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import org.michaelbel.plurals.ui.AppTheme
+
+class MainActivity: FragmentActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            AppTheme {
+                val navController = rememberNavController()
+                var selectedTab by remember { mutableStateOf("View") }
+
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        TopAppBar(
+                            title = {
+                                Text(
+                                    text = "Plurals"
+                                )
+                            }
+                        )
+                    },
+                    bottomBar = {
+                        NavigationBar {
+                            NavigationBarItem(
+                                selected = selectedTab == "View",
+                                onClick = { selectedTab = "View" },
+                                label = {
+                                    Text(
+                                        text = "View"
+                                    )
+                                },
+                                icon = {
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_xml_24),
+                                        contentDescription = null
+                                    )
+                                }
+                            )
+                            NavigationBarItem(
+                                selected = selectedTab == "Compose",
+                                onClick = { selectedTab = "Compose" },
+                                label = {
+                                    Text(
+                                        text = "Compose"
+                                    )
+                                },
+                                icon = {
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_compose_24),
+                                        contentDescription = null
+                                    )
+                                }
+                            )
+                        }
+                    }
+                ) { innerPadding ->
+                    NavHost(
+                        navController = navController,
+                        startDestination = selectedTab,
+                        modifier = Modifier.padding(innerPadding).fillMaxSize()
+                    ) {
+                        composable("View") { AndroidFragment(PluralsFragment::class.java) }
+                        composable("Compose") { PluralsPane() }
+                    }
+                }
+            }
+        }
+    }
+}

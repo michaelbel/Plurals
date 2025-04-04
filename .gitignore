@@ -10,8 +10,4 @@ generated
 # Idea
 .idea
 
-/config/keystore_release.jks
-/config/keystore.properties
-
 local.properties
-releaseNotes.txt

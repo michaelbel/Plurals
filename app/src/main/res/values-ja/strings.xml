@@ -1,0 +1,7 @@
+<resources>
+
+    <plurals name="book_count">
+        <item quantity="other">%d 冊の本があります</item>
+    </plurals>
+
+</resources>

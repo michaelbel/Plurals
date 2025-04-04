@@ -1,0 +1,8 @@
+<resources>
+
+    <plurals name="book_count">
+        <item quantity="one">%d Buch</item>
+        <item quantity="other">%d Bücher</item>
+    </plurals>
+
+</resources>

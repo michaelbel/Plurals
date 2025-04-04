@@ -1,0 +1,7 @@
+<resources>
+
+    <plurals name="book_count">
+        <item quantity="other">你有 %d 本书</item>
+    </plurals>
+
+</resources>

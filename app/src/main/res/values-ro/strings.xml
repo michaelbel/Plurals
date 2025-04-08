@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">Plurals</string>
+
+    <!--
+    🇷🇴Румынский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">1 zi</item>
+        <item quantity="few">%d zile</item>
+        <item quantity="other">%d de zile</item>
+    </plurals>
+
+</resources>

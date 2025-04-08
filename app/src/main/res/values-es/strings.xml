@@ -1,9 +1,14 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">%d libro</item>
-        <item quantity="many">%d libros</item>
-        <item quantity="other">%d libros</item>
+    <!--
+    🇪🇸Испанский
+    🇮🇹Итальянский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">1 día</item>
+        <item quantity="many">%d de días</item>
+        <item quantity="other">%d días</item>
     </plurals>
 
 </resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">Plurals</string>
+
+    <!--
+    🇱🇻Латышский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="zero">%d diennakšu</item>
+        <item quantity="one">%d diennakts</item>
+        <item quantity="other">%d diennaktis</item>
+    </plurals>
+
+</resources>

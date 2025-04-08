@@ -1,10 +1,14 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">%d książka</item>
-        <item quantity="few">%d książki</item>
-        <item quantity="many">%d książek</item>
-        <item quantity="other">%d książki</item>
+    <!--
+    🇵🇱Польский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">1 miesiąc</item>
+        <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
+        <item quantity="other">%d miesiąca</item>
     </plurals>
 
 </resources>

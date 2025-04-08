@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">Plurals</string>
+
+    <!--
+    🇮🇱Иврит
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">יום</item>
+        <item quantity="two">יומיים</item>
+        <item quantity="other">%d ימים</item>
+    </plurals>
+
+</resources>

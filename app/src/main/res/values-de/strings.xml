@@ -1,8 +1,12 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">%d Buch</item>
-        <item quantity="other">%d Bücher</item>
+    <!--
+    🇩🇪Немецкий
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">1 Tag</item>
+        <item quantity="other">%d Tage</item>
     </plurals>
 
 </resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">Plurals</string>
+
+    <!--
+    🇸🇮Словенский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">%d dan</item>
+        <item quantity="two">%d dneva</item>
+        <item quantity="few">%d dnevi</item>
+        <item quantity="other">%d dni</item>
+    </plurals>
+
+</resources>

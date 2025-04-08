@@ -1,9 +1,13 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">Vous avez %d livre</item>
-        <item quantity="many">Vous avez %d livres</item>
-        <item quantity="other">Vous avez %d livres</item>
+    <!--
+    🇫🇷Французский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">%d jour</item>
+        <item quantity="many">%d de jours</item>
+        <item quantity="other">%d jours</item>
     </plurals>
 
 </resources>

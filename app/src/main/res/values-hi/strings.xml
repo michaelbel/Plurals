@@ -1,8 +1,14 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">%d किताब</item>
-        <item quantity="other">%d किताबें</item>
+    <!--
+    🇮🇳Хинди
+    🇮🇷Персидский
+    🇧🇩Бенгальский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">%d घंटा</item>
+        <item quantity="other">%d घंटे</item>
     </plurals>
 
 </resources>

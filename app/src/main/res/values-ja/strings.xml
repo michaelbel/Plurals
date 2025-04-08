@@ -1,7 +1,15 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="other">%d 冊の本があります</item>
+    <!--
+    🇨🇳Китайский
+    🇯🇵Японский
+    🇰🇷Корейский
+    🇹🇭Тайский
+    🇻🇳Вьетнамский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="other">%d 日</item>
     </plurals>
 
 </resources>

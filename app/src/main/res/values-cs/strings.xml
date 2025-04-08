@@ -1,10 +1,14 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <plurals name="book_count">
-        <item quantity="one">%d kniha</item>
-        <item quantity="few">%d knihy</item>
-        <item quantity="many">%d knih</item>
-        <item quantity="other">%d knih</item>
+    <!--
+    🇨🇿Чешский
+    🇸🇰Словацкий
+    -->
+
+    <plurals name="days_count" tools:ignore="MissingQuantity">
+        <item quantity="one">1 den</item>
+        <item quantity="few">%d dny</item>
+        <item quantity="other">%d dní</item>
     </plurals>
 
 </resources>

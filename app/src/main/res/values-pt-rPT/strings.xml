@@ -1,9 +1,13 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">%d livro</item>
-        <item quantity="many">%d livros</item>
-        <item quantity="other">%d livros</item>
+    <!--
+    🇵🇹Португальский (Португалия)
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">%d dia</item>
+        <item quantity="many">%d de dias</item>
+        <item quantity="other">%d dias</item>
     </plurals>
 
 </resources>

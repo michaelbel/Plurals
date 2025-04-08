@@ -29,7 +29,7 @@ fun PluralsPane() {
         modifier = Modifier.fillMaxSize()
     ) {
         Text(
-            text = pluralStringResource(R.plurals.book_count, count, count),
+            text = pluralStringResource(R.plurals.days_count, count, count),
             modifier = Modifier.align(Alignment.Center),
             fontSize = 64.sp
         )

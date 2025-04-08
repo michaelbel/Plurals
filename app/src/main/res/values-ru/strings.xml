@@ -1,10 +1,16 @@
 <resources>
 
-    <plurals name="book_count">
-        <item quantity="one">%d книга</item>
-        <item quantity="few">%d книги</item>
-        <item quantity="many">%d книг</item>
-        <item quantity="other">%d книги</item>
+    <!--
+    🇷🇺Русский
+    🇺🇦Украинский
+    🇧🇾Белорусский
+    -->
+
+    <plurals name="days_count">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
     </plurals>
 
 </resources>

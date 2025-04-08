@@ -14,7 +14,7 @@ class PluralsFragment: Fragment(R.layout.plurals_fragment) {
     private val binding get() = _binding!!
 
     private var count: Int by Delegates.observable(0) { _, _, newValue ->
-        binding.textView.text = resources.getQuantityString(R.plurals.book_count, newValue, newValue)
+        binding.textView.text = resources.getQuantityString(R.plurals.days_count, newValue, newValue)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -25,7 +25,7 @@ class PluralsFragment: Fragment(R.layout.plurals_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView.text = resources.getQuantityString(R.plurals.book_count, count, count)
+        binding.textView.text = resources.getQuantityString(R.plurals.days_count, count, count)
 
         binding.decreaseButton.setOnClickListener { count-- }
         binding.increaseButton.setOnClickListener { count++ }

@@ -55,11 +55,7 @@ class MainActivity: FragmentActivity() {
                             NavigationBarItem(
                                 selected = selectedTab == "View",
                                 onClick = { selectedTab = "View" },
-                                label = {
-                                    Text(
-                                        text = "View"
-                                    )
-                                },
+                                label = { Text("View") },
                                 icon = {
                                     Icon(
                                         painter = painterResource(R.drawable.ic_xml_24),
@@ -70,11 +66,7 @@ class MainActivity: FragmentActivity() {
                             NavigationBarItem(
                                 selected = selectedTab == "Compose",
                                 onClick = { selectedTab = "Compose" },
-                                label = {
-                                    Text(
-                                        text = "Compose"
-                                    )
-                                },
+                                label = { Text("Compose") },
                                 icon = {
                                     Icon(
                                         painter = painterResource(R.drawable.ic_compose_24),
@@ -91,7 +83,7 @@ class MainActivity: FragmentActivity() {
                         modifier = Modifier.padding(innerPadding).fillMaxSize()
                     ) {
                         composable("View") { AndroidFragment(PluralsFragment::class.java) }
-                        composable("Compose") { PluralsPane() }
+                        composable("Compose") { PluralsComposable() }
                     }
                 }
             }

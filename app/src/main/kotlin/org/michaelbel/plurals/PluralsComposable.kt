@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun PluralsPane() {
+fun PluralsComposable() {
     var count by remember { mutableIntStateOf(0) }
 
     Box(

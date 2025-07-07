@@ -1,5 +1,4 @@
-import org.apache.commons.io.output.ByteArrayOutputStream
-import java.nio.charset.Charset
+import java.nio.charset.StandardCharsets
 
 plugins {
     alias(libs.plugins.android.application)
@@ -8,16 +7,16 @@ plugins {
 }
 
 private val gitCommitsCount: Int by lazy {
-    when {
-        System.getProperty("os.name").contains("Windows", ignoreCase = true) -> 1
-        else -> {
-            val stdout = ByteArrayOutputStream()
-            exec {
-                commandLine("git", "rev-list", "--count", "HEAD")
-                standardOutput = stdout
-            }
-            stdout.toString(Charset.defaultCharset()).trim().toInt()
+    try {
+        val isWindows = System.getProperty("os.name").contains("Windows", ignoreCase = true)
+        val processBuilder = when {
+            isWindows -> ProcessBuilder("cmd", "/c", "git", "rev-list", "--count", "HEAD")
+            else -> ProcessBuilder("git", "rev-list", "--count", "HEAD")
         }
+        processBuilder.redirectErrorStream(true)
+        processBuilder.start().inputStream.bufferedReader(StandardCharsets.UTF_8).readLine().trim().toInt()
+    } catch (_: Exception) {
+        1
     }
 }
 
@@ -37,6 +36,21 @@ android {
         versionName = "1.0.0"
     }
 
+    signingConfigs {
+        getByName("debug") {
+            keyAlias = "plurals"
+            keyPassword = "password"
+            storeFile = rootProject.file("config/debug-key.jks")
+            storePassword = "password"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
     buildFeatures {
         compose = true
         viewBinding = true
@@ -52,20 +66,14 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui.tooling)
-    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.fragment.compose)
     implementation(libs.androidx.navigation.compose)
 }
 
-tasks.register("printVersionName") {
+tasks.register("printVersion") {
     doLast {
-        println(android.defaultConfig.versionName)
-    }
-}
-
-tasks.register("printVersionCode") {
-    doLast {
-        println(android.defaultConfig.versionCode.toString())
+        println("VERSION_NAME=${android.defaultConfig.versionName}")
+        println("VERSION_CODE=${android.defaultConfig.versionCode}")
     }
 }

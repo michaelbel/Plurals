@@ -40,7 +40,7 @@ android {
         getByName("debug") {
             keyAlias = "plurals"
             keyPassword = "password"
-            storeFile = rootProject.file("config/debug-key.jks")
+            storeFile = rootProject.file(".github/debug-key.jks")
             storePassword = "password"
         }
     }

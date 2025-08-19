@@ -41,15 +41,7 @@ class MainActivity: FragmentActivity() {
 
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    topBar = {
-                        TopAppBar(
-                            title = {
-                                Text(
-                                    text = "Plurals"
-                                )
-                            }
-                        )
-                    },
+                    topBar = { TopAppBar(title = { Text(text = "Plurals") }) },
                     bottomBar = {
                         NavigationBar {
                             NavigationBarItem(

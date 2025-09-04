@@ -27,7 +27,7 @@
     -->
 
     <plurals name="days_count">
-        <item quantity="one">1 day</item>
+        <item quantity="one">%d day</item>
         <item quantity="other">%d days</item>
     </plurals>
 

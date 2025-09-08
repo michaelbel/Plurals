@@ -2,6 +2,8 @@
 
     <!--
     🇷🇺Русский
+
+    Такие же правила для:
     🇺🇦Украинский
     🇧🇾Белорусский
     -->
@@ -10,7 +12,6 @@
         <item quantity="one">%d день</item>
         <item quantity="few">%d дня</item>
         <item quantity="many">%d дней</item>
-        <item quantity="other">%d дня</item>
     </plurals>
 
 </resources>

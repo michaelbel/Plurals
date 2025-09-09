@@ -2,9 +2,9 @@
     <img src=".github/pics/cover.png" alt="Cover">
 </div>
 
-[![](https://img.shields.io/badge/Пост_в_Telegram-24A1DE?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/foundout)
+[![](https://img.shields.io/badge/Пост_в_Telegram-24A1DE?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/foundout/291)
 [![](https://img.shields.io/badge/Пост_на_Boosty-F15F2C?style=for-the-badge&logo=boosty&logoColor=F6F6F6)](https://boosty.to/michaelbel/posts/9efececa-2e78-40e8-bd74-4f381c55983a)
-[![](https://img.shields.io/badge/Видео_на_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@michaelbely)
+[![](https://img.shields.io/badge/Видео_на_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/eGKcebZcBmo)
 
 
 Plurals

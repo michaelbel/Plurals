@@ -20,7 +20,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "Plurals"
 include(":app")

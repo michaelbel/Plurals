@@ -20,7 +20,10 @@ private val gitCommitsCount: Int by lazy {
 }
 
 kotlin {
-    jvmToolchain(libs.versions.jdk.get().toInt())
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(libs.versions.jdk.get().toInt()))
+        vendor.set(JvmVendorSpec.ADOPTIUM)
+    }
 }
 
 android {

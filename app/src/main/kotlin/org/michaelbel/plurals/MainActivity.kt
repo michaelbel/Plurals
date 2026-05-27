@@ -72,7 +72,7 @@ class MainActivity: FragmentActivity() {
                     NavHost(
                         navController = navController,
                         startDestination = selectedTab,
-                        modifier = Modifier.padding(innerPadding).fillMaxSize()
+                        modifier = Modifier.fillMaxSize().padding(innerPadding)
                     ) {
                         composable("View") { AndroidFragment(PluralsFragment::class.java) }
                         composable("Compose") { PluralsComposable() }

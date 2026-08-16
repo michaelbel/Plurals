@@ -12,6 +12,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -62,7 +63,10 @@ class MainActivity: FragmentActivity() {
                                         painter = painterResource(R.drawable.ic_xml_24),
                                         contentDescription = null
                                     )
-                                }
+                                },
+                                colors = NavigationBarItemDefaults.colors(
+                                    selectedTextColor = MaterialTheme.colorScheme.primary
+                                )
                             )
                             NavigationBarItem(
                                 selected = selectedTab == "Compose",
@@ -73,7 +77,10 @@ class MainActivity: FragmentActivity() {
                                         painter = painterResource(R.drawable.ic_compose_24),
                                         contentDescription = null
                                     )
-                                }
+                                },
+                                colors = NavigationBarItemDefaults.colors(
+                                    selectedTextColor = MaterialTheme.colorScheme.primary
+                                )
                             )
                         }
                     }

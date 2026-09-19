@@ -6,7 +6,7 @@ plugins {
 private val gitCommitsCount: Int by lazy {
     ProcessBuilder("git", "rev-list", "--count", "HEAD")
         .redirectErrorStream(true)
-        .start().inputStream.bufferedReader().readLine().trim().toInt()
+        .start().inputStream.bufferedReader().readLine()?.trim()?.toIntOrNull() ?: 1
 }
 
 kotlin {
